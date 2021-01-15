@@ -2,7 +2,6 @@ const navSlide = () => {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-links li');
-    const contact = document.querySelector('.contact');
 
     burger.addEventListener('click', () => {
         //Toggle Nav
@@ -23,9 +22,7 @@ const navSlide = () => {
 
     });
     
-    contact.addEventListener('click', () => {
-        contact.classList.toggle('contact-active');
-    });
+
 
 
 }

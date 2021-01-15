@@ -16,7 +16,6 @@ nav{
     min-height: 8vh;
     background-color: rgb(139, 51, 0);
     font-family: 'Playfair Display', serif;
-    text-decoration: none;
 }
 nav a{
     text-decoration: none;
@@ -44,11 +43,24 @@ nav a{
 
 .nav-links{
     display: flex;
-    cursor: pointer;
     text-decoration: none;
     justify-content: space-around;
+    margin-left: 19%;
+    min-width: 10%;
     width: 50%;
     z-index: 99999;
+}
+.nav-links li{
+    list-style: none;
+}
+.nav-links a{
+    color: rgb(233, 233, 233);
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-size: 25px;
+    font-weight: bold;
 }
 .nav-links, li a:visited{
     color: rgb(233, 233, 233);
@@ -57,31 +69,22 @@ nav a{
     color: rgb(0, 0, 0);
     transition: all 0.5s ease 0s;
 }
-.nav-links li{
-    list-style: none;
-}
-.nav-links a{
-    color: rgb(233, 233, 233);
-    text-decoration: none;
-    letter-spacing: 3px;
-    font-size: 25px;
-    font-weight: bold;
-}
 
 
-.contact{
+.email1{
+    display: none;
+}
+
+.email2{
+    font-size: 20px;
     color: rgb(233, 233, 233);
-    text-decoration: none;
-    letter-spacing: 3px;
-    font-size: 25px;
+    cursor: default;
     font-weight: bold;
+    letter-spacing: 2px;
+    padding-right: 10px;
 }
-.contact:visited{
-    color: rgb(233, 233, 233);
-}
-.contact:hover{
-    color: rgb(0, 0, 0);
-    transition: all 0.5s ease 0s;
+.email2:hover{
+    color: rgb(233, 233, 233)
 }
 
 
@@ -137,12 +140,13 @@ nav a{
     text-decoration: none;
     font-weight: 200;
     letter-spacing: 1px;
+    line-height: 90%;
     outline-style: solid;
     outline-color: rgba(255, 94, 0, 0.5);
     outline-width: 3px;
     outline-offset: 5px;
     position: absolute;
-    top: 23%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -195,8 +199,12 @@ nav a{
     .nav-links a{
         font-size: 15px;
     }
-    .contact{
+    .email1{
+        color:rgb(233, 233, 233);
         font-size: 15px;
+    }
+    .email2{
+        display: none;
     }
     .burger{
         display: block;
@@ -217,16 +225,12 @@ nav a{
         font-weight: 200;
         letter-spacing: 3px;;
     }
-
-
 }
 
 .nav-active{
     transform: translateX(0%);
 }
-.contact-active{
-    transform: translateX(0%);
-}
+
 
 
 @keyframes navLinkFade{
